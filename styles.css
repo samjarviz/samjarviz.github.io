@@ -1,0 +1,171 @@
+:root {
+    --smoky-black: rgba(15, 10, 10, 1);
+    --isabelline: rgba(245, 239, 237, 1);
+    --blue-munsell: rgba(34, 146, 164, 1);
+    --dim-gray: rgba(115, 111, 114, 1);
+    --red-cmyk: rgba(237, 28, 36, 1);
+    }
+    html {
+        font-family: 'League Spartan', 'Verdana';
+        font-size: 16px;
+        --animate-delay: 0.1s;
+    }
+    * {
+        /* border: 1px dashed white; */
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        display: flex;
+        background: var(--smoky-black);
+        color: var(--isabelline);
+        width: 100%;
+        height: 100%;
+    }
+    
+    nav {
+        position: fixed;
+        z-index: 1;
+        /* border: 2px dashed red; */
+        top: 0%;
+        width: 100%;
+        height: 6%;
+        background-color: var(--smoky-black);
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .pattern2 {
+        background: linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, transparent 25%),linear-gradient(45deg, transparent 24%,#ffffff 25%, #ffffff 45%, transparent 45%), linear-gradient(315deg, transparent 24%,#ffffff 25%, #ffffff 45%, transparent 45%);
+            background-size: 3em 3em;
+            background-color: #000000;
+            opacity: 0.2;
+            z-index: -11;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    nav ul li {
+        border-radius: 15px;
+        padding: 5px 10px;
+        font-size: 2rem;
+        background-color: var(--smoky-black);
+    }
+    nav ul li:hover {
+        animation: pulse;
+        animation-duration: 1s;
+        background-color: var(--smoky-black);
+    }
+    .pattern {
+        background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    /* background-color: #0f0a0a;
+    opacity: 1;
+    background-image:  radial-gradient(#736f72 1.3px, transparent 1.3px), radial-gradient(#736f72 1.3px, #0f0a0a 1.3px);
+    background-size: 52px 52px;
+    background-position: 0 0,26px 26px; */
+    }
+    
+    main {
+        /* border: 2px dashed yellow; */
+        margin-top: 12.5%;
+        width: 100%;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section {
+        /* background: linear-gradient(
+            180deg,
+            var(--dim-gray) 50%,
+            var(--smoky-black)
+        ); */
+        background-color: var(--smoky-black);
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        margin: auto;
+    }
+    .divider {
+        width: 100%;
+        height: 10%;
+    }
+    .About {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(1px 5px 5px var(--blue-munsell));
+    }
+    .intro {
+        width: 50%;
+        height: 100%;
+        padding: 5%;
+    }
+    .intro ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        font-size: 1.75rem;
+        overflow-x: wrap;
+    }
+    .intro ul li img {
+        width: 100%;
+        max-width: 250px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        padding-bottom: 15px;
+    }
+    .profile-pic {
+        background-position: center;
+        background-size: 75%;
+        background-repeat: no-repeat;
+        width: 50%;
+        overflow: hidden;
+        height: 100%;
+        background-image: url('https://drive.google.com/uc?export=view&id=1MQ5Z8AvYsxLAIBQ70kF7T64FueHuGBn2');
+        clip-path: circle(50% at 50% 50%);
+        padding: none;
+    }
+    
+    @media (max-width: 550px) {
+        html {
+            font-size: 12px;
+        }
+    }
+    
+    @media (max-width: 750px) {
+        .intro ul {
+            font-size: 1.5rem;
+        }
+        .intro ul li:first-of-type {
+            width: 30%;
+        }
+        .About {
+            flex-direction: column;
+        }
+        .intro {
+            width: 85%;
+        }
+        .profile-pic {
+            width: 85%;
+        }
+    }
