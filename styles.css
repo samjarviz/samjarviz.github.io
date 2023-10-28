@@ -104,7 +104,9 @@
     }
     .divider {
         width: 100%;
-        height: 10%;
+        height: 5px;
+        border-bottom: 3px solid var(--dim-gray);
+        z-index: 1;
     }
     .About {
         display: flex;
@@ -113,6 +115,9 @@
         filter: drop-shadow(1px 5px 5px var(--blue-munsell));
     }
     .intro {
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
         width: 50%;
         height: 100%;
         padding: 5%;
@@ -145,10 +150,42 @@
         clip-path: circle(50% at 50% 50%);
         padding: none;
     }
-    
+    .Skills {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--smoky-black);
+        text-align: center;
+        height: 5vh;
+        width: 100%;
+        margin: auto;
+    }
+    .Skills h1 {
+        margin-top: 12.5%;
+    }
+    .Skills ul {
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+        align-items: center;
+        list-style: none;
+        font-size: 1.75rem;
+        overflow-x: wrap;
+    }
+
+    .smaller {
+        width: 50%;
+    }
     @media (max-width: 550px) {
         html {
             font-size: 12px;
+        }
+        .Skills ul li img {
+            width: 24px;
+            height: 24px;
         }
     }
     
@@ -161,11 +198,18 @@
         }
         .About {
             flex-direction: column;
+            gap: 5%;
         }
         .intro {
             width: 85%;
+            height: 50%;
         }
         .profile-pic {
             width: 85%;
+            height: 50%;
+        }
+        .Skills ul li img {
+            width: 36px;
+            height: 36px;
         }
     }
