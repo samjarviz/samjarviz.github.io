@@ -9,6 +9,7 @@
         font-family: 'League Spartan', 'Verdana';
         font-size: 16px;
         --animate-delay: 0.1s;
+        scroll-behavior: smooth;
     }
     * {
         /* border: 1px dashed white; */
@@ -26,7 +27,7 @@
     
     nav {
         position: fixed;
-        z-index: 1;
+        z-index: 3;
         /* border: 2px dashed red; */
         top: 0%;
         width: 100%;
@@ -37,6 +38,7 @@
         align-items: center;
         justify-content: space-around;
     }
+
     .pattern2 {
         background: linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, transparent 25%),linear-gradient(45deg, transparent 24%,#ffffff 25%, #ffffff 45%, transparent 45%), linear-gradient(315deg, transparent 24%,#ffffff 25%, #ffffff 45%, transparent 45%);
             background-size: 3em 3em;
@@ -47,7 +49,7 @@
         height: 100%;
         position: absolute;
     }
-    nav ul {
+    .nav-container {
         display: flex;
         list-style: none;
         justify-content: space-around;
@@ -61,11 +63,33 @@
         font-size: 2rem;
         background-color: var(--smoky-black);
     }
-    nav ul li:hover {
+    ul li:hover {
         animation: pulse;
         animation-duration: 1s;
         background-color: var(--smoky-black);
     }
+    .no-pulse:hover {
+        animation: none;
+        animation-name: initial;
+        animation-duration: unset;
+    }
+    .social-icons {
+        padding-left: 1%;
+        padding-right: 1%;
+        display: flex;
+        position: relative;
+        left: 2.5%;
+        justify-content: space-around;
+        gap: 5%;
+        align-items: center;
+        list-style: none;
+        width: 20%;
+      }
+      .nav-link {
+        text-decoration: none;
+        color: white;
+      }
+
     .pattern {
         background-color:black;
     background-image:
@@ -84,7 +108,7 @@
     
     main {
         /* border: 2px dashed yellow; */
-        margin-top: 12.5%;
+        
         width: 100%;
         height: 100vh;
         margin-left: auto;
@@ -129,10 +153,28 @@
         list-style: none;
         font-size: 1.75rem;
         overflow-x: wrap;
+        gap: 2.5%;
     }
     .intro ul li img {
         width: 100%;
         max-width: 250px;
+    }
+    button {
+        border-radius: 25px;
+        border: none;
+        background-color: var(--blue-munsell);
+        width: 75px;
+        height: 35px;
+        padding: 5px;
+        color: var(--isabelline);
+        font-family: 'League Spartan', 'Verdana';
+        margin-left: 15px;
+        text-align: center;
+    }
+    button:hover {
+        animation: pulse;
+        animation-duration: 1s;
+        cursor: pointer;
     }
     h1 {
         text-align: center;
@@ -151,7 +193,7 @@
         padding: none;
     }
     .Skills {
-        margin-top: 150px;
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -161,9 +203,7 @@
         height: 5vh;
         width: 100%;
         margin: auto;
-    }
-    .Skills h1 {
-        margin-top: 12.5%;
+        padding-top: 10%;
     }
     .Skills ul {
         margin: auto;
@@ -177,7 +217,179 @@
     }
 
     .smaller {
+        width: 60%;
+        margin: auto;
+    }
+    .smallest {
+        width: 25%;
+        margin: auto;
+    }
+    #Projects {
+        padding: 15px;
+    }
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-flow: dense;
+        grid-gap: 1.5%;
+        overflow: hidden;
+        width: 95%;
+        height: 100%;
+        margin-bottom: 2%;
+        justify-items: center;
+        align-items: center;
+      }
+      .project {
+        border: 5px solid var(--lapis-lazuli);
+        background: linear-gradient(
+          180deg,
+          var(--lapis-lazuli),
+          var(--teal)
+        ); 
+        border-radius: 12.5%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 5px;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5%;
+        overflow: hidden;
+      }
+      .project-header {
         width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-bottom: 5px solid white;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        text-align: left;
+      }
+      .project-header i {
+        font-size: 1.7rem;
+      }
+      
+      .project-title {
+        border: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        
+      }
+      .project .pic {
+        font-size: 5rem;
+      }
+      .project h5 {
+        margin-bottom: -25px;
+      }
+      .project ul {
+        display: flex;
+        width: 90%;
+        gap: 5%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 5px;
+      }
+      #Experience {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 50vh;
+      }
+      .section-header {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        padding: 15px;
+      }
+      .job {
+        width: 350px;
+        height: 350px;
+        border: 3px solid var(--dim-gray);
+        border-radius: 15px;
+        margin: auto;
+        padding: 15px;
+      }
+      .job p {
+        margin-top: 15px;
+      }
+      .date {
+        font-style: italic;
+        
+      }
+      .img-wrapper {
+        height: 200px;
+        overflow: hidden;
+        border-radius: 16px;
+        margin-top: 10px;
+      }
+      .img-wrapper img {
+        object-fit: cover;
+        transition: transform 0.8s;
+        height: 100%;
+      }
+      .img-wrapper:hover img {
+        transform: scale(1.1);
+      }
+      .description {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+        width: 75%;
+        height: 75%;
+        margin: auto;
+        border: 3px solid var(--dim-gray);
+        border-radius: 15px;
+        padding: 15px;
+      }
+    #Contact {
+        height: 20vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      #Contact ul {
+        border-radius: 5px 5px 35px 0;
+        margin: auto;
+        padding: 0;
+        padding-top: 15px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 2.5%;
+        white-space: nowrap;
+        flex: 1;
+      }
+      .social-icons2 {
+        display: flex;
+        font-size: 2rem;
+        flex: 1;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #Contact li {
+        overflow: hidden;
+      }
+      .blue {
+        color: var(--blue-munsell);
+      }
+
+    footer {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        background-color: var(--blue-munsell);
+        padding: 15px;
     }
     @media (max-width: 550px) {
         html {
@@ -187,9 +399,20 @@
             width: 24px;
             height: 24px;
         }
+        nav ul li img {
+            width: 24px;
+            height: 24px;
+        }
+        .social-icons {
+            width: 15%;
+          }
+        
+        .About {
+            height: 75vh;
+        }
     }
     
-    @media (max-width: 750px) {
+    @media (max-width: 885px) {
         .intro ul {
             font-size: 1.5rem;
         }
@@ -197,8 +420,17 @@
             width: 30%;
         }
         .About {
+            height: 140vh;
             flex-direction: column;
             gap: 5%;
+            overflow-y: auto;
+            justify-content: center;
+        }
+        .intro, .Skills {
+            margin-top: 35px;
+        }
+        .profile-pic {
+            margin-top: 25px;
         }
         .intro {
             width: 85%;
@@ -211,5 +443,32 @@
         .Skills ul li img {
             width: 36px;
             height: 36px;
+        }
+
+        nav ul li img {
+            width: 36px;
+            height: 36px;
+        }
+
+        nav ul li a i {
+            font-size: 26px;
+        }
+
+        .social-icons {
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            gap: 1%;
+            width: auto;
+          }
+    }
+    @media (max-width: 716px) {
+        #Experience {
+            height: 170vh;
+        }
+    }
+    @media (min-width: 717px) and (max-width: 1416px) {
+        #Experience {
+            height: 85vh;
         }
     }

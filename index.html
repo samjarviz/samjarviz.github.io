@@ -3,31 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yolo</title>
+    <title>Sam Jarvis Portfolio</title>
     <link href="styles.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1C54R0XzD85py6zY94rVlr0YKRqntX1TD" type="image/x-icon">
 </head>
 <body class="pattern">
     <nav>
-        <ul>
-            <li class="animate__animated">About</li>
-            <li class="animate__animated">Projects</li>
-            <li class="animate__animated">Contact</li>
+        <ul class="nav-container">
+            <li><img width="48" height="48" src="https://drive.google.com/uc?export=view&id=1C54R0XzD85py6zY94rVlr0YKRqntX1TD" alt="Sam Jarvis Logo"></li>
+            <ul class="social-icons">
+                <li><a id="profile-link" class="nav-link" href="https://github.com/samjarviz" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a class="nav-link" href="https://linkedin.com/in/samjarviz" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a class="nav-link" href="mailto:samjarvis@vt.edu" target="_blank"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+            <li class="animate__animated"><a class="nav-link" href="#About">About</a></li>
+            <li class="animate__animated"><a class="nav-link" href="#Projects">Projects</a></li>
+            <li class="animate__animated"><a class="nav-link" href="#Experience">Experience</a></li>
+            <li class="animate__animated"><a class="nav-link" href="#Contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section class="About">
+        <section id="About" class="About">
             <div class="intro">
                 <h1 class="animate__animated animate__fadeIn animate__delay-1s">👋Hi I'm Sam, a Full-Stack Developer.</h1>
                 <ul>
-                    <li><img src="https://drive.google.com/uc?export=view&id=1QJorqEhBw6S-YYD9xYkD_ex6S2KYSBaR" alt="Virginia Tech Logo"></li>
-                    <li>3.84 GPA</li>
-                    <li>Expected Graduation: May 2026</li>
+                    <li class="no-pulse"><img src="https://drive.google.com/uc?export=view&id=1QJorqEhBw6S-YYD9xYkD_ex6S2KYSBaR" alt="Virginia Tech Logo"></li>
+                    <li class="no-pulse">3.84 GPA</li>
+                    <li class="no-pulse">Expected Graduation: May 2026</li>
                 </ul>
                 <div class="divider"></div>
+                <p>Hello there, I'm a passionate and results-oriented undergraduate student at Virginia Tech, where I've maintained a solid 3.84 GPA. With over five years of practical work experience, I've delved deep into the world of software development, and I'm genuinely excited about what the future holds in this dynamic field.
+                    One of the things I love most about my work is the constant quest for innovation. Staying on top of industry trends is a personal commitment because I believe that being innovative is key to success. I'm always researching the latest creative and technological advancements, ensuring that I'm at the forefront of the ever-evolving tech landscape.
+                    </p>
+                    <p>View my Resume Here: <button onclick="window.open('https://drive.google.com/uc?export=view&id=1GgZrov4bXujXNyMz4ByUtcd2CuulXvSp', '_blank')">Resume</button></p>
                 <div class="Skills">
                     <h1>Proficient Skills</h1>
                     <div class="divider"></div>
@@ -59,8 +72,145 @@
             </div>
             <div class="profile-pic"></div>
         </section>
-        <section class="Projects">
-        </section>
+        <h2 class="section-header">Projects</h2>
+        <section id="Projects" class="Projects">
+            <div class="project-grid">
+            <div class="project">
+              <div class="project-header">
+              <h3 class="project-title">Twitter Clone</h3>
+              <a id="profile-link" class="nav-link" href="https://github.com/samjarviz" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+              <i class="fab fa-twitter pic"></i>
+              <h5>Utilized:</h5>
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Typescript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>PostgreSQL</li>
+                <li>Supabase</li>
+                <li>Git</li>
+              </ul>
+              <h5>Status: IN-PROGRESS</h5>
+            </div>
+            <div class="project">
+              <div class="project-header">
+              <h3 class="project-title">Expense Tracker</h3>
+              <a id="profile-link" class="nav-link" href="https://github.com/samjarviz" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+              <i class="fas fa-dollar-sign pic"></i>
+              <h5>Utilized:</h5>
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Typescript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>PostgreSQL</li>
+                <li>Supabase</li>
+                <li>Git</li>
+              </ul>
+              <h5>Status: IN-PROGRESS</h5>
+            </div>
+            <div class="project">
+              <div class="project-header">
+              <h3 class="project-title">Product Page</h3>
+              <a id="profile-link" class="nav-link" href="https://github.com/samjarviz" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+              <i class="fas fa-book pic"></i>
+              <h5>Utilized:</h5>
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Git</li>
+              </ul>
+              <h5>Status: COMPLETE</h5>
+            </div>
+            <div class="project">
+              <div class="project-header">
+              <h3 class="project-title">Document Page</h3>
+              <a id="profile-link" class="nav-link" href="https://github.com/samjarviz" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+              <i class="fas fa-quote-left pic"></i>
+              <h5>Utilized:</h5>
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Git</li>
+              </ul>
+              <h5>Status: COMPLETE</h5>
+            </div>
+            </div>
+          </section>
+          <h2 class="section-header">Experience</h2>
+          <section id="Experience">
+            <div class="job">
+                <h3>VectorThree | Video Producer</h3>
+                <p>Create over 40 engaging videos a month for 10-12 clients to drive awareness and demand to their products.</p>
+                <p class="date">December 2022 - Present</p>
+                <div class="img-wrapper">
+                    <a id="profile-link" class="nav-link" href="https://www.vectorthree.dev/" target="_blank"><img src="https://www.vectorthree.dev/logo.png" alt="VectorThree Logo"></a>
+                </div>
+            </div>
+            <div class="job">
+                <h3>American Marketing Association | Vice President of Graphic Design</h3>
+                <p>Work directly with 5-10 clients to increase brand awareness by 25% by producing 10 graphics a month including flyers and social media posts.</p>
+                <p class="date">August 2022 - Present</p>
+                <div class="img-wrapper">
+                    <a id="profile-link" class="nav-link" href="https://www.amavt.com/" target="_blank"><img height="640" width="1280" src="https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/3874461/204071_103817.png" alt="AMA Logo"></a>
+                </div>
+            </div>
+            <div class="job">
+                <h3>i-Rite iPhone Repair | IT Technician</h3>
+                <p>Repaired electronics worth more than $1,000 a unit, like iPhones and iPads.</p>
+                <p class="date">June 2022 - August 2022</p>
+                <div class="img-wrapper">
+                    <a id="profile-link" class="nav-link" href="https://www.i-rite.com/" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1huPIba-QcP2eJii7BOeFnvBjhd1pWrD_" alt="i-Rite iPhone Logo"></a>
+                </div>
+            </div>
+            <div class="job">
+                <h3>2nd Life Incorporated | IT Technician</h3>
+                <p>Refurbished, cleaned, and debugged over 50 computer parts every day.</p>
+                <p class="date">June 2021 - August 2021</p>
+                <div class="img-wrapper">
+                    <a id="profile-link" class="nav-link" href="https://www.2ndlifeinc.com/" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1amwrzq0srJMF_n3E0xCGUnhkf-k15Se0" alt="2nd Life Inc Logo"></a>
+                </div>
+            </div>
+          </section>
+          <section>
+            <div class="description">
+                <p>I am pursuing a career in computer science with a specific focus on software development and cybersecurity. My career objective is to become a skilled software engineer or cybersecurity specialist, working on cutting-edge technologies to create innovative solutions and enhance digital security.
+
+                    I discovered my passion for computer science during my time working at an iPhone repair store and a laptop repair warehouse. Observing the intersection of hardware and software in these environments sparked my interest in the field, and I began exploring programming and cybersecurity independently.
+                    I am passionate about computer science because it offers the opportunity to continuously learn and adapt in a rapidly evolving technological landscape. It allows me to solve complex problems, contribute to software development, and play a critical role in protecting digital assets from cyber threats.
+    
+                        My relevant professional experiences include diagnosing and repairing hardware issues in mobile devices and laptops, which has provided me with a strong foundation in hardware technologies. Additionally, I have gained proficiency in programming languages like Java and SQL and have worked on personal coding projects.</p> <div class="divider"></div>
+                        <p>I aspire to become a software engineer who develops innovative, user-friendly applications or a cybersecurity specialist who helps safeguard organizations from cyberattacks. I hope to make a positive impact in my chosen field by creating secure software and contributing to advancements in technology.
+    
+                            While working in this field, I aim to achieve a deeper understanding of software development and cybersecurity, stay updated on industry trends, and continuously improve my problem-solving skills. I also hope to collaborate with diverse teams to solve challenging technical problems.
+                            
+                            My personal and professional values, including attention to detail, dedication to continuous learning, and a strong work ethic, make me competent in this field. These values drive me to maintain the highest quality standards in my work and adapt to the ever-changing technology landscape, which is essential in the computer science field. In my future, I hope to continue to be constantly learning the greatest coding practices and pushing my knowledge further day by day.</p>
+            </div>
+            
+          </section>
+          <h2 class="section-header">Contact Info</h2>
+        <section id="Contact">
+            <ul>
+              <li class="no-pulse"><a class="blue" href="mailto:samjarvis@vt.edu" target="_blank">samjarvis@vt.edu</a></li>
+              <li class="no-pulse">(804) 709-7825</li>
+            </ul>
+            <div class="divider smallest"></div>
+            <ul class="social-icons2">
+            <li class="animate__animated"><a id="profile-link" class="nav-link" href="https://github.com/samjarviz" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li class="animate__animated"><a class="nav-link" href="https://linkedin.com/in/samjarviz" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li class="animate__animated"><a class="nav-link" href="mailto:samjarvis@vt.edu" target="_blank"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+            <p></p>
+          </section>
+        <footer>
+            &copy; 2023 Sam Jarvis Portfolio. All rights reserved.
+        </footer>
     </main>
     <div class="pattern2"></div>
 </body>
